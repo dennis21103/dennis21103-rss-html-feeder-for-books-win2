@@ -17,13 +17,12 @@ import random
 # Feeds
 myfeeds = [
   'https://forum.sys-adm.in/latest.rss',
-  #  'https://readmanga.live/rss/manga?name=o_moem_pererojdenii_v_mech',
+   # 'https://readmanga.live/rss/manga?name=o_moem_pererojdenii_v_mech',
 ]
-# 0 = .
-# 8 = -
-# Написать функцию зманеы входных символов на 0 и 8 по шаблону
-inputnamedb = 'a' + inputnamedb.strip().lower().replace(' ','_').replace('-','_').replace('.','_').replace('.','_')
-tablename: str = inputnamedb
+
+inputnamedb = ' Test186977990'
+inputnamedb = '_' + inputnamedb.strip().lower().replace(' ','_').replace('-','_').replace('.','_').replace('.','_') + '_'
+tablename: str = str(inputnamedb)
 
 # User agents
 uags = [
@@ -101,7 +100,7 @@ def read_article_feed(feed):
         b:str = str(feed.bozo)
         if  b != 'False':
             print ('problem with URL',' error ',a )
-    return 0
+        return 0
     for article in feed['entries']:
         if article_is_not_db(article['title'], article['published']):
             rss: str = feed['version']
