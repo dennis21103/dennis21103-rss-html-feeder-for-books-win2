@@ -22,8 +22,8 @@ myfeeds = [
 # 0 = .
 # 8 = -
 # Написать функцию зманеы входных символов на 0 и 8 по шаблону
-tablename: str = 'forum0sys8ad_m0in'
-rss = 'False'
+inputnamedb = 'a' + inputnamedb.strip().lower().replace(' ','_').replace('-','_').replace('.','_').replace('.','_')
+tablename: str = inputnamedb
 
 # User agents
 uags = [
