@@ -49,7 +49,7 @@ proxies = {
 
 # DB
 scriptDir = os.path.dirname(os.path.realpath(__file__))
-db_connection = sqlite3.connect(scriptDir + '/rss.sqlite')
+db_connection = sqlite3.connect(scriptDir + '/db/rss.sqlite')
 db = db_connection.cursor()
 #dbline = 'CREATE TABLE IF NOT EXISTS '+ tablename + '(title TEXT, date TEXT)'
 #query = NULL
